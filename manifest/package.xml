@@ -25,6 +25,8 @@
     <members>ParentToChild</members>
     <members>PartialDml</members>
     <members>ScientificCalculatorController</members>
+    <members>StatementExample</members>
+    <members>LoopExample</members>
     <members>Soql</members>
     <members>Subtract</members>
     <members>Test</members>
