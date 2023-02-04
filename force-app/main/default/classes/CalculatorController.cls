@@ -1,4 +1,4 @@
-/** @classname            :   CalculatorController
+/** @classname             :   CalculatorController
  *  @author                :   Raghavendra Kadam
  *  @date                  :   01-Feb-2023
  *  @description           :   This is class VFpage controller 
@@ -28,7 +28,7 @@ public with sharing class CalculatorController {
     return null;
   }
   
-/** @methodname 	         :   button1Clicked
+/** @methodname            :   button1Clicked
  *  @author                :   Raghavendra Kadam
  *  @param                 :   none
  *  @description           :   This method used to get button clicked values of Calculator button
@@ -39,7 +39,7 @@ public with sharing class CalculatorController {
     return null;
   }
 
-/** @methodname           :   button2Clicked
+/** @methodname            :   button2Clicked
  *  @author                :   Raghavendra Kadam
  *  @param                 :   none
  *  @description           :   This method used to get button clicked values of Calculator button
@@ -72,7 +72,7 @@ public with sharing class CalculatorController {
     return null;
   }
 
-/** @methodname           :   button5Clicked
+/** @methodname            :   button5Clicked
  *  @author                :   Raghavendra Kadam
  *  @param                 :   none
  *  @description           :   This method used to get button clicked values of Calculator button
@@ -83,7 +83,7 @@ public with sharing class CalculatorController {
     return null;
   }
 
-/** @methodname           :   button6Clicked
+/** @methodname            :   button6Clicked
  *  @author                :   Raghavendra Kadam
  *  @param                 :   none
  *  @description           :   This method used to get button clicked values of Calculator button
@@ -105,7 +105,7 @@ public with sharing class CalculatorController {
     return null;
   }
   
-/** @methodname           :   button8Clicked
+/** @methodname            :   button8Clicked
  *  @author                :   Raghavendra Kadam
  *  @param                 :   none
  *  @description           :   This method used to get button clicked values of Calculator button
