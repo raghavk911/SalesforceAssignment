@@ -15,7 +15,7 @@ public with sharing class HandlerBeforeAfterConcept {
 */
   public void beforeInsert(List<Account>accList){
     for (Account acc : accList) {
-      System.debug('Before Insert=='+acc);
+      System.debug('Before Insert=='+acc); 
     }
   }
 /**  @methodname 	    :   afterInsert 
