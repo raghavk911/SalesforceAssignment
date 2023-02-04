@@ -1,26 +1,25 @@
-/**  @classname  			:   TestCalculatorController
-  *  @author 				:   Raghav
-  *  @date 					:   01-02-2023
-  *  @description  			:   This is Test class of CalculatorController which contain Calculator functionality
-  *  @modification log		:	
-  *  1. Comments added 01-02-2023
+/** @classname            :   TestCalculatorController
+ *  @author               :   Raghavendra Kadam
+ *  @date                 :   01-Feb-2023
+ *  @description          :   This is Test class of CalculatorController which contain Calculator functionality
+ *  @modification log
+ *  1. Raghavendra Kadam  :   Class added 01-Feb-2023
+ *  2. Raghavendra Kadam  :   Comments added 02-Feb-2023
+ *  3. Raghavendra Kadam  :   Corrected comments 03-Feb-2023
 */
 @isTest
 public class TestCalculatorController {
 
-/**  @methodname 	    :   TestButton
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
-  *  @description       :   This test method test button click values
-  *  @return 			:   none
+/**  @methodname          :   TestButton
+  *  @author              :   Raghavendra Kadam
+  *  @description         :   This test method test button click values
 */
   @isTest
   public static void TestButton(){
     CalculatorController cal=new CalculatorController();
     cal.button0Clicked();
     cal.button1Clicked();
-    cal.button2Clicked();
+    cal.button2Clicked(); 
     cal.button3Clicked();
     cal.button4Clicked();
     cal.button5Clicked();
@@ -30,12 +29,9 @@ public class TestCalculatorController {
     cal.button9Clicked();
   }
 
-/**  @methodname 	    :   testSubstract
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
-  *  @description       :   This test method test parameter passing to url for sustraction 
-  *  @return 			:   none
+/**  @methodname          :   testSubstract
+ *  @author               :   Raghavendra Kadam
+ *  @description          :   This test method test parameter passing to url for sustraction 
 */
   @isTest
   public static void testSubstract(){
@@ -49,12 +45,9 @@ public class TestCalculatorController {
    System.Test.stopTest();
   }
   
-/**  @methodname 	    :   testDivide
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
-  *  @description       :   This test method test parameter passing to url for division
-  *  @return 			:   none
+/** @methodname           :   testDivide
+ *  @author               :   Raghavendra Kadam
+ *  @description          :   This test method test parameter passing to url for division
 */
   @isTest
   public static void testDivide(){
@@ -68,12 +61,9 @@ public class TestCalculatorController {
     System.Test.stopTest();
   }
 
-/**  @methodname 	    :   testMultiply
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
-  *  @description       :   This test method test parameter passing to url for multiplication
-  *  @return 			:   none
+/**  @methodname          :   testMultiply
+ *  @author               :   Raghavendra Kadam
+ *  @description          :   This test method test parameter passing to url for multiplication
 */
   @isTest
   public static void testMultiply(){
@@ -87,12 +77,9 @@ public class TestCalculatorController {
     System.Test.stopTest();
   }
   
-/**  @methodname 	    :   testResult
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
-  *  @description       :   This test method test logic for calculation of arithmetic operations
-  *  @return 			:   none
+/**  @methodname          :   testResult
+  *  @author              :   Raghavendra Kadam
+  *  @description         :   This test method test logic for calculation of arithmetic operations
 */
   @isTest
   public static void testResult(){ 
