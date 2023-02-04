@@ -15,7 +15,7 @@ public class LoopExample {
         i++;
     }
   }
-/** @methodname             :   execute
+/** @methodname              :   execute
  *  @author                  :   Raghavendra Kadam
  *  @param                   :   none
  *  @description             :   This method represents execution of do while loop
