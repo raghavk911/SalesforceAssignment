@@ -1,20 +1,17 @@
-/**  @classname  			:   AggregateSoql
-  *  @author 				:   Raghav
-  *  @date 					:   01-02-2023
-  *  @description  			:   This is class retrive Aggregate Soql querries
-  *  1. Comments added      :   01-02-2023
+/**  @classname           :   AggregateSoql
+  *  @author              :   Raghavendra Kadam
+  *  @date                :   01-Feb-2023
+  *  @description         :   This is class retrive Aggregate Soql querries
+  *  1.Raghavendra Kadam  :   Comments added 01-Feb-2023
 */
 public with sharing class AggregateSoql {
-
-  /**  @methodname 	    :   queOne
-    *  @author 			:   Raghav
-    *  @group  			:   none
-    *  @param  			:   none
-    *  @description     :   Write a SOQL query to retrieve the sum of all closed Opportunity amounts for current
-                            fiscal year. Store this information in a map with key as year and value as sum of amount.
-                            Iterate this map to display statistics.
-    *  @return 			:   none
-  */
+/** @methodname           :   queOne
+ *  @author               :   Raghavendra Kadam
+ *  @description          :   Write a SOQL query to retrieve the sum of all closed Opportunity amounts for current
+                              fiscal year. Store this information in a map with key as year and value as sum of amount.
+                              Iterate this map to display statistics.
+ *  @return               :   none
+*/
   public void queOne(){
     List<AggregateResult> ls=[Select SUM(Amount) amt, FiscalYear fisc from Opportunity where (CloseDate > LAST_FISCAL_YEAR AND StageName LIKE'Closed %') group by FiscalYear];
     Map<Integer,Decimal> opptMap;
@@ -25,13 +22,12 @@ public with sharing class AggregateSoql {
       System.debug('=='+opptMap);
   }
   
-/**  @methodname 	:   queTwo
-*  @author 			:   Raghav
-*  @group  			:   none
-*  @param  			:   none
-*  @description     :   Find total number of distinct Lead records on the basis of 'Lead Source' having greater
-                        than 10 leads. Print this information.
-*  @return 			:   none
+/** @methodname           :   queTwo
+ *  @author               :   Raghavendra Kadam
+ *  @param                :   none
+ *  @description          :   Find total number of distinct Lead records on the basis of 'Lead Source' 
+ *                            having greater than 10 leads. Print this information.
+ *  @return               :   none
 */
     public static void queTwo(){
       List<AggregateResult> ldList=[Select Id from Lead GROUP BY Id HAVING COUNT(LeadSource) > 10];
@@ -40,14 +36,13 @@ public with sharing class AggregateSoql {
       }
     }
 
-/**  @methodname 	:   queThree
-*  @author 			:   Raghav
-*  @group  			:   none
-*  @param  			:   none
-*  @description     :   Write a SOQL query to find the total number of Lead records by status by Lead Source.
-                        Store this information in a map and display the same.
-                        (Hint:map<string,map<string,integer>>)
-*  @return 			:   none
+/** @methodname           :   queThree
+ *  @author               :   Raghavendra Kadam
+ *  @param                :   none
+ *  @description          :   Write a SOQL query to find the total number of Lead records by status by Lead Source.
+                              Store this information in a map and display the same.
+                              (Hint:map<string,map<string,integer>>)
+ *  @return               :   none
 */
     public static void queThree(){
     List<AggregateResult> ls= new List<AggregateResult>([Select COUNT(Name) NumberOfLead, Status stat from Lead group by Status]);

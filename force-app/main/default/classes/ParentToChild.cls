@@ -1,31 +1,25 @@
 /*
-*  @classname  			:   ParentToChild
-*  @author 				:   Raghav
-*  @date 				:   01-02-2023
-*  @description  		:   This is class retrive Soql querries
-*  1. Comments added    :   01-02-2023
+*  @classname           :   ParentToChild
+*  @author              :   Raghavendra Kadam
+*  @date                :   01-Feb-2023
+*  @description         :   This is class retrive Soql querries
+*  1. Comments added    :   01-Feb-2023
 */
 public with sharing class ParentToChild {
-/**  @methodname 	    :   queOne
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
+/**  @methodname        :   queOne
+  *  @author            :   Raghavendra Kadam
   *  @description       :   Write a SOQL query on Account and find all associated contact records of the Account
                             which contains the Name as 'John'. Print all Account and Contact records retrieved above.
-  *  @return 			:   none
 */
 public static void queOne(){
   for(Account a:[Select Name, (Select Id, Name from contacts where Name='John') from Account]){
       System.debug('=='+a);
     }
   }
-/**  @methodname 	    :   queTwo
-  *  @author 			:   Raghav
-  *  @group  			:   none
-  *  @param  			:   none
+/**  @methodname        :   queTwo
+  *  @author            :   Raghavendra Kadam
   *  @description       :   Write a SOQL query to find all Account records which have at least an opportunity record
                             which is 'Closed Won'.
-  *  @return 			:   none
 */
 public static void queTwo(){
 
@@ -35,13 +29,10 @@ public static void queTwo(){
   }
 
 /*
-*  @methodname 	    :   queTwo
-*  @author 			:   Raghav
-*  @group  			:   none
-*  @param  			:   none
-*  @description     :   Write a SOQL query on 'A' and retrieve all parents with all their child records where the
-                        child name is 'John'. 
-*  @return 			:   none
+*  @methodname          :   queTwo
+*  @author              :   Raghavendra Kadam
+*  @description         :   Write a SOQL query on 'A' and retrieve all parents with all their child records where the
+                            child name is 'John'. 
 */
 
   public static void queThree(){
