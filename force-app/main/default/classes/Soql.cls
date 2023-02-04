@@ -91,6 +91,6 @@ public void getYear(){
   List<Opportunity> acc=[Select Id, Name from Opportunity where Amount >10000 order by CreatedDate asc limit 100 offset 50];
     for(Opportunity a:acc){
       System.debug('=='+a);
-	}
+	  }
   }
 }
