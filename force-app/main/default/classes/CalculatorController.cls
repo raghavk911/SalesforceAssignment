@@ -4,8 +4,8 @@
   *  @description           :   This is class VFpage controller 
   *  @modification log  
   *  1. Raghavendra Kadam   :   Class added 01-Feb-2023
-  *  1. Raghavendra Kadam   :   Comment added 01-Feb-2023
-  *  1. Raghavendra Kadam   :   Corrected comments added 01-Feb-2023
+  *  2. Raghavendra Kadam   :   Comment added 01-Feb-2023
+  *  3. Raghavendra Kadam   :   Corrected comments added 01-Feb-2023
 */
 public with sharing class CalculatorController {
   public  string val{get;set;}
