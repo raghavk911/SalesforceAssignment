@@ -1,75 +1,123 @@
 /*
-* @classname      TestDataFactory
-* @author         Raghav
-* @date           22-01-2023
-* @description    This is Test Data Factory class
-* 
-* @modificationlog
-* 1. Raghav        31-01-2023  Update the code indentation
-* 2. Raghav        01-02-2023  Add Code Comments
+* @classname        :  TestDataFactory
+* @author           :  Raghavendra Kadam 
+* @date             :  13-Dec-2022
+* @description      :  This is the TestDataFactory Class which will Create Different object Records
+
+* @modification log
+* 1. Raghavendra Kadam          :  01-Feb-2023  Update the code intentation
+* 2. Raghavendra Kadam          :  01-Feb-2023  Add Code Comments
+* 3. Raghavendra Kadam          :  03-Feb-2023 Mod
 */
+
 @isTest
 public class TestDataFactory {
 
 /*
-* @methodname         createOpportunity
-* @param              NumOfOpp
-* @description        This method is used for create data of Opportunity
-* @return             list of Opportunity
-* @author             Raghav 
-* @group              none
+* @methodname     :    accountData
+* @author         :    Raghavendra Kadam 
+* @param          :    Integer,Boolean
+* @description    :    This method  creates Account with Param num deciding
+                       how many accounts should get created and flag for deciding
+                       whether account list should be return or intserted
+* @return         :    List<Account>
 */
-  public static List<Opportunity> createOpportunity(Integer NumOfOpp){
-    List<Opportunity>oppList=new List<Opportunity>();
-    for(Integer i=0; i<NumOfOpp;i++){
-        Opportunity obj=new Opportunity();
-        obj.Name='Test'+i;
-        obj.Amount=8788;
-        obj.CloseDate=Date.newInstance(2022, 03, 28);
-        obj.StageName='Closed Won';
-        oppList.add(obj);
+  public Static  List<Account> accountData (Integer num,Boolean Flag){
+   
+    List<Account> accList = new  List<Account>();
+   
+    for(Integer i = 0 ; i< num ; i++)
+    {
+      Account a = new Account(Name = 'Test Account '+i, Phone ='10'+i);
+      a.Industry = 'Agriculture';
+      accList.add(a);
     }
-    insert oppList;
-    return oppList;
-  }
 
-/*
-* @methodname         createAccount
-* @param              NumOfOpp
-* @description        This method is used for create data of Accounts
-* @return             list of Account
-* @author             Raghav 
-* @group              none
-*/
-  public static List<Account> createAccount(Integer NumOfOpp){
-    List<Account>accList=new List<Account>();
-    for(Integer i=0; i<NumOfOpp; i++){
-        Account acc=new Account();
-        acc.Name='Test'+i;
-        acc.Total_Amount__c=0;
-        accList.add(acc);
+    if(Flag == True)
+    {
+      Insert accList;
     }
-    insert accList;
     return accList;
   }
 
-/*
-* @methodname         createLead
-* @param              NumOfOpp
-* @description        This method is used for create data of Lead
-* @return             list of Lead
-* @author             Raghav 
-* @group              none
+/**  
+*  @methodname     :  contactDataNew
+*  @author         :  Raghavendra Kadam 
+*  @param          :  Integer,Boolean
+*  @description    :  This method  creates contact with Param num deciding
+                      how many contact should get created and flag for deciding
+                      whether Contact list should be return or intserted
+*  @return         :  List<Contact>
 */
-  public static List<Lead> createLead(Integer NumOfOpp){
-    List<Lead>ldList=new List<Lead>();
-    for(Integer i=0; i<NumOfOpp; i++){
-      Lead ld=new Lead();
-      ld.LastName='Test'+i;
-      ld.Company='Company'+i;
-      ld.Status='Closed - Converted';
-      ldList.add(ld);
+  public Static  List<Contact> contactDataNew (Integer num, Boolean Flag){
+   
+    List<Contact> coList = new  List<Contact>();
+   
+    for(Integer i = 0 ; i< num ; i++)
+    {
+      Contact c = new Contact(LastName = 'Test Contact '+i, Phone ='10'+i);
+      coList.add(c);
     }
-    return ldList;
+
+    if(Flag == True)
+    {
+      Insert coList;
+    }
+    return coList;
+  }
+
+/*
+* @methodname       :   OpportunityInsert
+* @author           :   Raghavendra Kadam 
+* @param            :   Integer,Boolean
+* @description      :   This method  creates Lead with Param num deciding how many contact
+                        should get created and flag for deciding
+                        whether Lead  list should be return or intserted
+* @return           :   List<lead>
+*/
+
+  public Static List<lead> leadRecord(Integer num, Boolean Flag){
+    List<Lead> leadList = new List<Lead>();
+    for(Integer i = 0 ; i <num ; i++)
+    {
+      Lead l = new lead(FirstName = 'LeadTesty'+i );
+      l.LastName = 'TestLastName'+i ;
+      l.City = 'shegaon';
+      l.Country = 'India';
+      l.Status = 'Web'+i;
+      l.Company = 'naruto'+i;
+      leadList.add(l);
+    }
+
+     if(Flag == True){
+      Insert leadList;
+    }
+    return leadList;
+  }
+
+  /*
+  * @methodname      :   OpportunityInsert
+  * @author          :   Raghavendra Kadam 
+  * @group           :   none
+  * @param           :   Integer,Boolean
+  * @description     :   This method  creates Lead with Param num deciding
+                         how many contact should get created
+                         and flag for deciding whether Lead  list should be return or intserted
+  * @return          :   List<Opportunity>
+  */
+
+  public Static  List<Opportunity> opportunityData (Integer num, Boolean Flag){
+  List<Opportunity> oppList = new  List<Opportunity>();
+  for(Integer i = 0 ; i< num ; i++)
+  {
+    Opportunity o = new Opportunity(Name = 'Test Opportunity'+i);
+    o.CloseDate = Date.newInstance(2023, 01, 01);
+    o.StageName = 'Qualification';
+    oppList.add(o);
+  }
+  if(Flag == True){
+    Insert oppList;
+  }
+  return oppList;
   }
 }

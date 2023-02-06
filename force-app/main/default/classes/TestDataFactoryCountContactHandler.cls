@@ -1,22 +1,22 @@
 /*
-* @classname      TestDataFactoryCountContactHandler
-* @author         Raghav
-* @date           22-01-2023
-* @description    This is Test Data Factory of CountContactHandler
-* 
-* @modification log
-* 1. Raghav        31-01-2023  Update the code indentation 
-* 2. Raghav        01-02-2023  Add Code Comments
+ * @classname               :   TestDataFactoryCountContactHandler
+ * @author                  :   Raghavendra Kadam
+ * @date                    :   22-Jan-2023
+ * @description             :   This is Test Data Factory of CountContactHandler
+ * 
+ * @modification log
+ * 1. Raghavendra Kadam     :   31-Jan-2023  Updated the code indentation 
+ * 2. Raghavendra Kadam     :   01-Feb-2023  Added Code Comments
+ * 2. Raghavendra Kadam     :   02-Feb-2023  Corrected Code Comments
 */
 @isTest
 public class TestDataFactoryCountContactHandler {
 /*
-* @methodname         createContact
-* @param              First Name, Last Name
-* @description        This method is used for create Contacts for Test Data Factory
-* @return             List of Contact
-* @author             Raghav 
-* @group              none
+ * @methodname              :   createContact
+ * @param                   :   First Name, Last Name
+ * @description             :   This method is used for create Contacts for Test Data Factory
+ * @return                  :   List of Contact
+ * @author                  :   Raghavendra Kadam 
 */
   public static List<Contact> createContact(String fnm, String lnm){
     List<Contact> conList=new List<Contact>();
@@ -29,12 +29,11 @@ public class TestDataFactoryCountContactHandler {
     return conList;
   }
 /*
-* @methodname         createAccount
-* @param              Number of Accounts
-* @description        This method is used for create Accounts for Test Data Factory
-* @return             List of Account
-* @author             Raghav 
-* @group              none
+ * @methodname              :   createAccount
+ * @param                   :   Integer Number of accounts
+ * @description             :   This method is used for create Accounts for Test Data Factory
+ * @return                  :   List of Accounts
+ * @author                  :   Raghavendra Kadam 
 */
   public static List<Account> createAccount(Integer NumOfAcc){
    List<Account> accList= new List<Account>();

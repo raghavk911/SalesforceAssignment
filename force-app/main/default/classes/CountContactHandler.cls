@@ -1,23 +1,21 @@
 /*
-* @classname      CountContactHandler
-* @author         Raghav
-* @date           22-01-2023
-* @description    This is Handler class of Trigger CountContactsOnAccount contain logic of count all contacts.
-* 
-* @modification log
-* 1. Raghav        31-01-2023  Update the code indentation
-* 2. Raghav        01-02-2023  Add Code Comments
+ * @classname              :   CountContactHandler
+ * @author                 :   Raghavendra Kadam
+ * @date                   :   22-Jan-2023
+ * @description            :   This is Handler class of Trigger CountContactsOnAccount contain logic of count all contacts
+ * 
+ * @modification log
+ * 1. Raghavendra Kadam    :   31-Jan-2023  Update the code indentation
+ * 2. Raghavendra Kadam    :   01-Feb-2023  Add Code Comments
 */
 
 public class CountContactHandler {
-
-/*
-* @methodname         CountContactHelper
-* @param              List of new Contact, List of old Contact
-* @description        This method is used for result calculation of operator
-* @return             none
-* @author             Raghav 
-* @group              none
+/** 
+ * @methodname              :  CountContactHelper
+ * @param                   :  List<contact>, List<contact>
+ * @description             :  This method is used for result calculation of operator
+ * @return                  :  none
+ * @author                  :  Raghavendra Kadam 
 */
   public static void CountContactHelper(List<contact> newcontact, List<contact> oldcontact){
     set<id> accIds= new set<id>();

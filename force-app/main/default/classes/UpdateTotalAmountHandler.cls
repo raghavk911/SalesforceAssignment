@@ -1,22 +1,21 @@
 /*
-* @classname      UpdateTotalAmountHandler
-* @author         Raghav
-* @date           22-01-2023
-* @description    This is Handler class of Trigger TriggerUpdateTotalAmount which update total amount field on Account
-* 
-* @modification log
-* 1. Raghav        31-01-2023  Update the code indentation
-* 2. Raghav        01-02-2023  Add Code Comments
+ * @classname             :  UpdateTotalAmountHandler
+ * @author                :  Raghavendra Kadam
+ * @date                  :  22-Jan-2023
+ * @description           :  This is Handler class of Trigger TriggerUpdateTotalAmount which update total amount field on Account
+ * 
+ * @modification log
+ * 1. Raghavendra Kadam   :   31-Jan-2023  Update the code indentation
+ * 2. Raghavendra Kadam   :   01-Feb-2023  Add Code Comments
 */
 
 public class UpdateTotalAmountHandler {
 /*
-* @methodname         updateAmount
-* @param              List of Opportunity
-* @description        This method is used for update total amount field of Account
-* @return             List of Account
-* @author             Raghav 
-* @group              none
+ * @methodname            :    updateAmount
+ * @param                 :    List of Opportunity
+ * @description           :    This method is used for update total amount field of Account
+ * @return                :    List of Account
+ * @author                :    Raghavendra Kadam
 */
   public void updateAmount(List<Opportunity> opp){
     List<Account> accList=new List<Account>();
@@ -24,6 +23,7 @@ public class UpdateTotalAmountHandler {
     for(Opportunity oppty:opp){
       oppId.add(oppty.AccountId);
     }
+
     for(Account acc:[Select Id,Total_Amount__c, (Select Amount from Opportunities) from Account Where Id In: oppId]){
       acc.Total_Amount__c=0;
       for(Opportunity oppty:acc.Opportunities){
